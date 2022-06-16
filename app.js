@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 
-const app = express;
+const app = express();
 const mongoose = require('mongoose');
 const { MONGO_DB_CONFIG } = require('./config/app.config');
 const http = require('http');
