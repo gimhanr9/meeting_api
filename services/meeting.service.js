@@ -56,7 +56,7 @@ const isMeetingHappening = async (meetingId, callback) => {
 
 const checkMeetingExists = async (meetingId, callback) => {
   meeting
-    .findById(meetingId, 'hostId,hostName,startTime')
+    .findById(meetingId)
     .populate('users', 'User')
     .then((response) => {
       if (!response) callback('Invalid meeting Id');
